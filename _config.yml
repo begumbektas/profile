@@ -27,14 +27,14 @@ author:
   avatar           : "headshot.jpg"
   name             : ""
   bio              : "Postdoctoral Machine Learning Researcher"  
-  location         : "New York, NY, USA"
-  employer         : "Memorial Sloan Kettering Cancer Center"
-  email            : "bektasa@mskcc.org"
+  location         : "Boston, MA, USA"
+  employer         : "Dana-Farber Cancer Institute and Harvard University"
+  email            : "begum@ds.dfci.harvard.edu"
 
   # Academic websites
   academia         : 
   arxiv            : 
-  googlescholar    : "https://scholar.google.com/citations?user=4TWM-VAAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=YYabm38AAAAJ"
   impactstory      : 
   orcid            : "https://orcid.org/0000-0002-1432-9056"
   semantic         : 
