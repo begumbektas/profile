@@ -1,0 +1,18 @@
+
+.author__urls li {
+  white-space: normal !important;
+  word-break: break-word;
+  line-height: 1.3em;
+}
+
+/* Specifically indent wrapped lines under the text, not under the icon */
+.author__urls li i {
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+/* Add left padding so second line aligns with text */
+.author__urls li {
+  text-indent: -1.3em;
+  padding-left: 1.3em;
+}
