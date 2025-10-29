@@ -7,6 +7,12 @@ redirect_from:
   - /about.html
 ---
 
+
+---
+layout: single
+author_profile: true
+---
+
 # **Ayyüce Begüm Bektaş, PhD**
 
 ### **Machine Learning | Optimization | Computational Biology**
