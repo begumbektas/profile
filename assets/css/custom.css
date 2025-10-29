@@ -16,3 +16,18 @@
   text-indent: -1.3em;
   padding-left: 1.3em;
 }
+/* Always show sidebar details on phones/tablets */
+@media (max-width: 768px) {
+  .author__urls-wrapper .btn { display: none; }         /* hide the Follow button */
+  .author__urls { display: block !important; }          /* show the list */
+}
+
+/* Better wrapping + indent under the icon (also helps on mobile) */
+.author__urls li {
+  white-space: normal !important;
+  word-break: break-word;
+  line-height: 1.35;
+  text-indent: -1.3em;
+  padding-left: 1.3em;
+}
+.author__urls li i { vertical-align: top; margin-top: 2px; }
