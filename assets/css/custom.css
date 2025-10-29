@@ -31,3 +31,36 @@
   padding-left: 1.3em;
 }
 .author__urls li i { vertical-align: top; margin-top: 2px; }
+
+/* --- Keep sidebar info visible on all screen sizes --- */
+
+/* 1. Ensure the author info is always shown */
+.author__urls-wrapper .author__urls {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-height: none !important;
+}
+
+/* 2. Fix line wrapping under icons (for employer etc.) */
+.author__urls li {
+  white-space: normal !important;
+  word-break: break-word;
+  text-indent: -1.3em;   /* align wrapped lines under the text, not icon */
+  padding-left: 1.3em;
+  line-height: 1.35;
+}
+.author__urls li i {
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+/* 3. Make sure the sidebar content doesn't collapse on mobile */
+@media (max-width: 768px) {
+  .author__urls-wrapper {
+    display: block !important;
+  }
+  .author__urls-wrapper .btn {
+    display: none !important; /* just in case any leftover button code exists */
+  }
+}
