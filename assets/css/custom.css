@@ -1,9 +1,9 @@
 /* =========================================
-   Sidebar fixes: show info, no Follow button,
-   nice wrapping, no icon clipping on desktop
+   AcademicPages / Minimal Mistakes overrides
+   for sidebar (author box)
    ========================================= */
 
-/* 1) Always show the author info list */
+/* 1) Always show the author info list (location, employer, links) */
 .author__urls-wrapper .author__urls {
   display: block !important;
   visibility: visible !important;
@@ -11,18 +11,28 @@
   max-height: none !important;
 }
 
-/* 2) Hide Follow button everywhere (you removed it, this is just insurance) */
+/* 2) Hide the Follow button everywhere (you already removed it, this is guard) */
 .author__urls-wrapper .btn {
   display: none !important;
 }
 
-/* 3) Base style for sidebar list items (desktop / wide) */
+/* 3) Bio: let it wrap nicely, no line breaks needed */
+.author__content .author__bio {
+  white-space: normal !important;
+  word-break: break-word;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 0.6rem;
+  text-align: left;
+}
+
+/* 4) Base style for sidebar list items (desktop / wide screens) */
 .author__urls li {
   white-space: normal !important;
   word-break: break-word;
   line-height: 1.35;
   text-indent: 0;     /* no negative indent on desktop */
-  padding-left: 0;    /* let icon sit in normal flow */
+  padding-left: 0;
 }
 
 .author__urls li i {
@@ -31,7 +41,7 @@
   margin-right: 0.35rem;
 }
 
-/* 4) On narrower screens, indent wrapped lines so they align under text */
+/* 5) On narrower screens, indent wrapped lines so they align under text, not icon */
 @media (max-width: 1100px) {
   .author__urls li {
     text-indent: -1.3em;
@@ -39,7 +49,7 @@
   }
 }
 
-/* 5) Make sure the whole wrapper is visible on mobile */
+/* 6) Make sure the wrapper is visible on mobile, too */
 @media (max-width: 768px) {
   .author__urls-wrapper {
     display: block !important;
@@ -48,3 +58,14 @@
     padding-bottom: 1rem;
   }
 }
+
+/* 7) (Optional) Slightly widen sidebar on medium screens
+      Uncomment if sidebar still feels cramped
+ */
+/*
+@media (min-width: 1024px) {
+  .sidebar {
+    flex: 0 0 320px;
+  }
+}
+*/
