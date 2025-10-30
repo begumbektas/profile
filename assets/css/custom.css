@@ -1,40 +1,9 @@
+/* =========================================
+   Sidebar fixes: show info, no Follow button,
+   nice wrapping, no icon clipping on desktop
+   ========================================= */
 
-.author__urls li {
-  white-space: normal !important;
-  word-break: break-word;
-  line-height: 1.3em;
-}
-
-/* Specifically indent wrapped lines under the text, not under the icon */
-.author__urls li i {
-  vertical-align: top;
-  margin-top: 2px;
-}
-
-/* Add left padding so second line aligns with text */
-.author__urls li {
-  text-indent: -1.3em;
-  padding-left: 1.3em;
-}
-/* Always show sidebar details on phones/tablets */
-@media (max-width: 768px) {
-  .author__urls-wrapper .btn { display: none; }         /* hide the Follow button */
-  .author__urls { display: block !important; }          /* show the list */
-}
-
-/* Better wrapping + indent under the icon (also helps on mobile) */
-.author__urls li {
-  white-space: normal !important;
-  word-break: break-word;
-  line-height: 1.35;
-  text-indent: -1.3em;
-  padding-left: 1.3em;
-}
-.author__urls li i { vertical-align: top; margin-top: 2px; }
-
-/* --- Keep sidebar info visible on all screen sizes --- */
-
-/* 1. Ensure the author info is always shown */
+/* 1) Always show the author info list */
 .author__urls-wrapper .author__urls {
   display: block !important;
   visibility: visible !important;
@@ -42,25 +11,40 @@
   max-height: none !important;
 }
 
-/* 2. Fix line wrapping under icons (for employer etc.) */
+/* 2) Hide Follow button everywhere (you removed it, this is just insurance) */
+.author__urls-wrapper .btn {
+  display: none !important;
+}
+
+/* 3) Base style for sidebar list items (desktop / wide) */
 .author__urls li {
   white-space: normal !important;
   word-break: break-word;
-  text-indent: -1.3em;   /* align wrapped lines under the text, not icon */
-  padding-left: 1.3em;
   line-height: 1.35;
+  text-indent: 0;     /* no negative indent on desktop */
+  padding-left: 0;    /* let icon sit in normal flow */
 }
+
 .author__urls li i {
   vertical-align: top;
   margin-top: 2px;
+  margin-right: 0.35rem;
 }
 
-/* 3. Make sure the sidebar content doesn't collapse on mobile */
+/* 4) On narrower screens, indent wrapped lines so they align under text */
+@media (max-width: 1100px) {
+  .author__urls li {
+    text-indent: -1.3em;
+    padding-left: 1.3em;
+  }
+}
+
+/* 5) Make sure the whole wrapper is visible on mobile */
 @media (max-width: 768px) {
   .author__urls-wrapper {
     display: block !important;
   }
-  .author__urls-wrapper .btn {
-    display: none !important; /* just in case any leftover button code exists */
+  .sidebar {
+    padding-bottom: 1rem;
   }
 }
