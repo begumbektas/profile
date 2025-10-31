@@ -26,7 +26,7 @@ repository               : "begumbektas/profile"
 author:
   avatar           : "headshot.jpg"
   name             : ""
-  bio              : "Postdoctoral Machine Learning Researcher"  
+  bio              : "Machine Learning Researcher"  
   location         : "Boston, MA, USA"
   employer         : "DFCI & Harvard University"
   email            : "begum@ds.dfci.harvard.edu"
